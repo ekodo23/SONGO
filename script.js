@@ -50,8 +50,7 @@
     // ---------- FONCTIONS UTILITAIRES ----------
     function isOpponentPit(index, player) {
         const opp = (player === SOUTH) ? NORTH : SOUTH;
-    
-    return playerPits[opp].includes(index);
+        return playerPits[opp].includes(index);
     }
 
     function opponentGrains(pitsArr) {
@@ -364,8 +363,7 @@
         div.className = 'pit';
         div.setAttribute('data-index', index);
 
-.
-3+--        const countSpan = document.createElement('span');
+        const countSpan = document.createElement('span');
         countSpan.className = 'seed-count';
         countSpan.textContent = seedCount;
         div.appendChild(countSpan);
