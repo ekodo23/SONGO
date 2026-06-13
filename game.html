@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songho – Jeu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="gameContainer">
+        <h2>🟤 Songho</h2>
+        <div class="score-area">
+            <div class="player-score">
+                Sud (bas) <span class="score-value" id="capturedSouth">0</span> graines
+            </div>
+            <div class="player-score">
+                Nord (haut) <span class="score-value" id="capturedNorth">0</span> graines
+            </div>
+        </div>
+        <div class="turn-indicator" id="turnIndicator">C'est au tour de Sud</div>
+        <div class="board-wrapper" id="board"></div>
+        <div class="message" id="message"></div>
+        <button class="btn" id="resetBtn">🔄 Nouvelle partie</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

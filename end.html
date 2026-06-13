@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songho – Résultat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container winner-screen" id="winnerScreen">
+        <h1>🏆 Partie terminée</h1>
+        <div id="winnerMessage"></div>
+        <div class="score-area">
+            <div class="player-score">
+                Sud : <span id="finalCapturedSouth" class="score-value">0</span> graines
+            </div>
+            <div class="player-score">
+                Nord : <span id="finalCapturedNorth" class="score-value">0</span> graines
+            </div>
+        </div>
+        <a href="game.html" class="btn"> Nouvelle partie</a>
+        <a href="index.html" class="btn"> Accueil</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('winnerMessage').textContent = params.get('winner') || '';
+        document.getElementById('finalCapturedSouth').textContent = params.get('score1') || '0';
+        document.getElementById('finalCapturedNorth').textContent = params.get('score2') || '0';
+    </script>
+</body>
+</html>
